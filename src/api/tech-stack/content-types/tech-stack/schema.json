@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tech_stacks",
+  "info": {
+    "singularName": "tech-stack",
+    "pluralName": "tech-stacks",
+    "displayName": "TechStack",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "experienceLevel": {
+      "type": "enumeration",
+      "enum": [
+        "limited",
+        "moderate",
+        "proficient"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "web",
+        "mobile",
+        "backend",
+        "design",
+        "softSkill",
+        "language"
+      ]
+    }
+  }
+}
