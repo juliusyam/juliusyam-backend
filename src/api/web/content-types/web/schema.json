@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "webs",
+  "info": {
+    "singularName": "web",
+    "pluralName": "webs",
+    "displayName": "Web",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "brief": {
+      "type": "string",
+      "required": true
+    },
+    "technologies": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::client.client"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "sortOrder": {
+      "required": true,
+      "unique": true,
+      "min": 1,
+      "type": "integer"
+    }
+  }
+}

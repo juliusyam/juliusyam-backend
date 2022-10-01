@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "designs",
+  "info": {
+    "singularName": "design",
+    "pluralName": "designs",
+    "displayName": "Design",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "brief": {
+      "type": "string",
+      "required": true
+    },
+    "products": {
+      "type": "string",
+      "required": true
+    },
+    "client": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::client.client"
+    },
+    "sortOrder": {
+      "type": "integer",
+      "unique": true,
+      "required": true,
+      "min": 1
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "about": {
+      "type": "text",
+      "required": true
+    },
+    "contribution": {
+      "type": "text",
+      "required": true
+    },
+    "onlinePresences": {
+      "type": "json",
+      "required": true
+    }
+  }
+}
