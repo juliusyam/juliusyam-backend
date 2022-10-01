@@ -4,7 +4,8 @@
   "info": {
     "singularName": "client",
     "pluralName": "clients",
-    "displayName": "Client"
+    "displayName": "Client",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -28,12 +29,17 @@
       "type": "string"
     },
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "sortOrder": {
+      "type": "integer",
+      "required": true,
+      "unique": true
     }
   }
 }
