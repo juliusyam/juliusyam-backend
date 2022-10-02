@@ -4,7 +4,6 @@ const region = process.env.AWS_REGION;
 
 module.exports = [
   'strapi::errors',
-  'strapi::security',
   'strapi::cors',
   'strapi::poweredBy',
   'strapi::logger',
