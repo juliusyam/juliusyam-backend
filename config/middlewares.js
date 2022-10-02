@@ -2,6 +2,8 @@
 const bucketName = process.env.AWS_BUCKET;
 const region = process.env.AWS_REGION;
 
+const bucketUrl = `https://${ bucketName }.s3.${ region }.amazonaws.com`;
+
 module.exports = [
   'strapi::errors',
   'strapi::cors',
@@ -23,15 +25,13 @@ module.exports = [
             "'self'",
             'data:',
             'blob:',
-            'dl.airtable.com',
-            `${ bucketName }.s3.${ region }.amazonaws.com`,
+            bucketUrl,
           ],
           'media-src': [
             "'self'",
             'data:',
             'blob:',
-            'dl.airtable.com',
-            `${ bucketName }.s3.${ region }.amazonaws.com`,
+            bucketUrl,
           ],
           upgradeInsecureRequests: null,
         },
