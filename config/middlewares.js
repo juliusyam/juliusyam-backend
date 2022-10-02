@@ -1,8 +1,7 @@
 
 const bucketName = process.env.AWS_BUCKET;
-const region = process.env.AWS_REGION;
 
-const bucketUrl = `https://${ bucketName }.s3.${ region }.amazonaws.com`;
+const bucketUrl = `https://${ bucketName }.s3.amazonaws.com`;
 
 module.exports = [
   'strapi::errors',
