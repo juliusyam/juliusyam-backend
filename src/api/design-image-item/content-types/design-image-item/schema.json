@@ -4,7 +4,8 @@
   "info": {
     "singularName": "design-image-item",
     "pluralName": "design-image-items",
-    "displayName": "DesignImageItem"
+    "displayName": "DesignImageItem",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,17 +21,22 @@
       "required": true
     },
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "design": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::design.design"
+    },
+    "sortOrder": {
+      "type": "integer",
+      "required": true,
+      "unique": true
     }
   }
 }
