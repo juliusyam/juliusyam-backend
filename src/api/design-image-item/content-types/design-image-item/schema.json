@@ -36,7 +36,8 @@
     "sortOrder": {
       "type": "integer",
       "required": true,
-      "unique": true
+      "unique": false,
+      "min": 1
     }
   }
 }
