@@ -11,7 +11,7 @@ module.exports = [
     config: {
       enabled: true,
       headers: '*',
-      origin: ['http://localhost:1337', 'http://localhost:3000', 'https://resonant-cajeta-d298bf.netlify.app/']
+      origin: ['http://localhost:1337', 'http://localhost:3000', 'https://resonant-cajeta-d298bf.netlify.app']
     }
   },
   'strapi::logger',
