@@ -1,5 +1,6 @@
 
 const bucketName = process.env.AWS_BUCKET;
+const backendUrl = process.env.BACKEND_URL;
 
 const bucketUrl = `https://${ bucketName }.s3.amazonaws.com`;
 
@@ -11,7 +12,7 @@ module.exports = [
     config: {
       enabled: true,
       headers: '*',
-      origin: ['http://localhost:1337', 'http://localhost:3000', 'https://resonant-cajeta-d298bf.netlify.app']
+      origin: ['http://localhost:1337', backendUrl, 'http://localhost:3000', 'https://resonant-cajeta-d298bf.netlify.app']
     }
   },
   'strapi::logger',
