@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "webs",
+  "collectionName": "mobiles",
   "info": {
-    "singularName": "web",
-    "pluralName": "webs",
-    "displayName": "Web",
-    "description": ""
+    "singularName": "mobile",
+    "pluralName": "mobiles",
+    "displayName": "Mobile"
   },
   "options": {
     "draftAndPublish": true
@@ -13,8 +12,7 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "brief": {
       "type": "string",
@@ -24,30 +22,25 @@
       "type": "string",
       "required": true
     },
-    "description": {
-      "type": "text"
-    },
     "link": {
       "type": "string"
     },
-    "client": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::client.client"
-    },
     "image": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
       "allowedTypes": [
         "images"
-      ]
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     },
     "sortOrder": {
+      "type": "integer",
       "required": true,
       "unique": true,
-      "min": 1,
-      "type": "integer"
+      "min": 0
+    },
+    "description": {
+      "type": "text"
     }
   }
 }
