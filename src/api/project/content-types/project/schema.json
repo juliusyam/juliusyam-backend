@@ -29,15 +29,13 @@
       "type": "date",
       "required": true
     },
-    "link": {
-      "type": "string"
+    "links": {
+      "type": "json",
+      "required": true
     },
     "brief": {
       "type": "string",
       "required": true
-    },
-    "originLink": {
-      "type": "string"
     },
     "image": {
       "allowedTypes": [
